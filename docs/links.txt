@@ -1,0 +1,39 @@
+https://github.com/openclaw/openclaw
+https://docs.openclaw.ai
+https://github.com/HKUDS/nanobot
+https://github.com/qwibitai/nanoclaw
+https://github.com/nearai/ironclaw
+https://github.com/warengonzaga/tinyclaw
+2. Security, Guardrails, & Access Control (For management & IT audits)
+These tools address leadership's primary concern: security. They demonstrate how you can implement domain whitelists, role-based permissions, and safe skill execution.
+https://github.com/prompt-security/clawsec
+https://www.guardrailsai.com/hub
+https://vue-rbac.nangazaki.io/
+https://github.com/github/gh-aw 
+https://github.com/samugit83/redamon
+https://clawskills.aaronwiseai.com/
+3. Business & Data Workflows (For CRM, accounting, & non-tech employees)
+This is the "impact" section for senior leadership, showing how the app will streamline data processing and client relationship management.
+https://github.com/business-science/ai-data-science-team/blob/master/ai_data_science_team/agents/sql_database_agent.py
+https://github.com/business-science/ai-data-science-team/tree/master/apps
+https://www.marktechpost.com/2025/07/19/building-a-multi-agent-ai-research-team-with-langgraph-and-gemini-for-automated-reporting/
+https://github.com/anthropics/knowledge-work-plugins/blob/main/data/skills/data-visualization/SKILL.md
+4. Super-Charging Software Developers (For your Dev Team)
+Links to inspire the architecture of the internal tools, agentic workflows, and task parallelization that will speed up your team's software development.
+https://github.com/andyrewlee/awesome-agent-orchestrators
+https://github.com/bigguy345/Github-Copilot-Atlas
+https://github.com/ShepAlderson/copilot-orchestra
+https://github.com/RunMaestro/Maestro
+https://github.com/code-yeongyu/oh-my-opencode/blob/dev/docs/guide/installation.md
+5. Skills Libraries & Ecosystems (For building Kantar's internal app catalog)
+These act as examples of what your audited "Skill Library" could look like, showing the sheer breadth of utilities people have created.
+https://github.com/VoltAgent/awesome-openclaw-skills
+https://github.com/rohitg00/awesome-openclaw
+https://github.com/kreuzberg-dev/kreuzberg
+https://github.com/google-gemini/gemini-skills
+6. Video Demos & Explanations
+
+https://www.youtube.com/watch?v=3110hx3ygp0
+https://www.youtube.com/watch?v=f8cfH5XX-XU
+https://www.youtube.com/watch?v=DUttMOh_YeM
+https://www.youtube.com/watch?v=nO85yBWrFHY
