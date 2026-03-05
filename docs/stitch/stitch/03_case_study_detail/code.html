@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Polish - Case Study Detail</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class", // Although the prompt asks for dark mode class, the design spec explicitly asks for a white/black high contrast theme. I will implement the design tokens correctly within the 'dark' class context or override where necessary to match the "Corporate Noir" white background aesthetic while keeping the technical requirement. Given the "Corporate Noir" description is heavily white background with black text, I will treat the "dark" mode requirement as the structural container but style the specific components to match the "Corporate Noir" (White/Black) aesthetic requested in the PRD.
+        theme: {
+          extend: {
+            colors: {
+              "noir-black": "#000000",
+              "noir-white": "#FFFFFF",
+              "noir-surface": "#F4F4F4",
+              "noir-gold": "#D4AF37",
+              "noir-text": "#111111",
+              "noir-muted": "#9CA3AF",
+            },
+            fontFamily: {
+              "serif": ['Playfair Display', 'serif'],
+              "sans": ['Inter', 'sans-serif'],
+              "mono": ['JetBrains Mono', 'monospace'],
+            },
+            borderRadius: {
+              DEFAULT: "0px", // Sharp corners as requested
+              'none': '0px',
+              'sm': '0px',
+              'md': '0px',
+              'lg': '0px',
+              'xl': '0px',
+              '2xl': '0px',
+              'full': '9999px', // Keep full for circles if absolutely needed
+            },
+            spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom Utilities for Corporate Noir */
+        body {
+            background-color: #FFFFFF; /* Force white background per PRD */
+            color: #111111;
+        }
+        
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Specific override for the 'dark' class requirement to ensure it matches the design system */
+        html.dark body {
+            background-color: #FFFFFF;
+            color: #111111;
+        }
+        
+        /* Grid pattern for background texture */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #f4f4f4 1px, transparent 1px),
+                              linear-gradient(to bottom, #f4f4f4 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-sans selection:bg-noir-gold selection:text-noir-black">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 w-full bg-noir-white border-b border-noir-black h-20 px-6 md:px-10 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 bg-noir-black flex items-center justify-center text-noir-gold">
+<span class="material-symbols-outlined text-xl">dataset</span>
+</div>
+<h1 class="font-serif font-bold text-xl tracking-tight text-noir-black">Kantar Efficiency &amp; Automation</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-noir-gold transition-colors" href="#">Executive Dashboard</a>
+<a class="text-sm font-medium hover:text-noir-gold transition-colors" href="#">Project Index</a>
+<a class="text-sm font-medium hover:text-noir-gold transition-colors" href="#">Tool Launcher</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center px-6 h-10 bg-noir-gold hover:bg-[#b8962e] transition-colors text-noir-black font-bold text-sm tracking-wide">
+                REQUEST PORTAL
+            </button>
+<div class="w-10 h-10 bg-noir-surface border border-noir-black flex items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-6 md:px-10 py-12 md:py-16">
+<!-- Case Study Header -->
+<section class="mb-16 border-b border-noir-black pb-12">
+<div class="flex flex-col gap-6 max-w-5xl">
+<div class="flex items-center gap-3">
+<span class="bg-noir-black text-noir-white text-xs font-mono px-2 py-1 uppercase tracking-widest">Case Study</span>
+<span class="text-noir-muted text-sm font-mono">ID: KAN-NA-24</span>
+</div>
+<h1 class="font-serif font-bold text-5xl md:text-7xl leading-[1.1] tracking-tight text-noir-black">
+                    The Global Logistics Reset
+                </h1>
+<p class="font-serif-italic text-2xl md:text-3xl text-noir-black/80 max-w-3xl leading-snug">
+                    Automating cross-Atlantic supply chain reporting for 95% efficiency gains and recovering 4,200 annual hours.
+                </p>
+</div>
+</section>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+<!-- Main Editorial Column -->
+<div class="lg:col-span-8 flex flex-col gap-0">
+<!-- The "Before" State (Problem) -->
+<div class="bg-noir-surface p-8 md:p-12 border border-b-0 border-noir-black relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">history_edu</span>
+</div>
+<h2 class="font-serif font-bold text-3xl mb-6 flex items-center gap-3">
+<span class="w-3 h-3 bg-red-800 rounded-full block"></span>
+                        The Manual Burden
+                    </h2>
+<div class="prose prose-lg max-w-none text-noir-text/90 font-serif leading-relaxed">
+<p class="mb-6 text-xl">
+                            Prior to Q3 2023, the <span class="italic font-bold">Logistics Reconciliation</span> process was a monolith of manual labor. Every Monday morning, six senior analysts across three time zones would log into SAP, export 14 distinct CSV files, and begin the arduous process of "stitching" them together.
+                        </p>
+<p class="mb-6">
+                            The friction was palpable. Data formatting inconsistencies led to broken VLOOKUPs. Email chains for clarification stretched into Tuesday afternoons. By the time the report reached the Executive Leadership Team on Wednesday, the data was already 48 hours stale.
+                        </p>
+<blockquote class="border-l-4 border-noir-black pl-6 my-8 italic text-2xl font-serif text-noir-black">
+                            "We were spending 80% of our time cleaning data and only 20% actually analyzing what it meant for the client."
+                        </blockquote>
+<p>
+                            This workflow consumed approximately <strong>85 collective hours per week</strong>, creating a bottleneck that prevented the team from taking on higher-value strategic consulting work. The error rate hovered around 12%, necessitating frequent restatements.
+                        </p>
+</div>
+<!-- Visual Representation of Old Process -->
+<div class="mt-12 p-6 border border-noir-black/20 bg-white/50">
+<h4 class="font-mono text-xs uppercase tracking-widest mb-4 text-noir-muted">Legacy Workflow Timeline (Days)</h4>
+<div class="flex w-full h-8 gap-1">
+<div class="h-full bg-noir-black w-[40%]" title="Data Extraction"></div>
+<div class="h-full bg-noir-black/80 w-[30%]" title="Cleaning"></div>
+<div class="h-full bg-noir-black/60 w-[20%]" title="Formatting"></div>
+<div class="h-full bg-noir-black/40 w-[10%]" title="Analysis"></div>
+</div>
+<div class="flex justify-between mt-2 font-mono text-xs text-noir-black">
+<span>Mon 9:00 AM</span>
+<span>Wed 2:00 PM</span>
+</div>
+</div>
+</div>
+<!-- The "Solution" State -->
+<div class="bg-noir-white p-8 md:p-12 border border-noir-black relative shadow-xl z-10 -mt-px">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-9xl">auto_mode</span>
+</div>
+<h2 class="font-sans font-bold text-3xl mb-6 flex items-center gap-3">
+<span class="w-3 h-3 bg-emerald-600 rounded-full block"></span>
+                        The Automation Engine
+                    </h2>
+<div class="prose prose-lg max-w-none text-noir-text font-sans leading-relaxed">
+<p class="mb-6">
+                            The solution deployed is a Python-based ETL (Extract, Transform, Load) pipeline hosted on the internal Kantar cloud. It triggers automatically at 4:00 AM GMT every Monday.
+                        </p>
+<p class="mb-6">
+                            Using the <code class="bg-noir-surface px-1 py-0.5 border border-noir-black/20 text-sm font-mono text-red-800">pandas</code> library, the script connects directly to the SAP data warehouse, bypassing the CSV export step entirely. It applies 45 distinct logic rules to clean, normalize, and merge the datasets in memory.
+                        </p>
+<div class="my-8 bg-noir-black p-6 text-noir-white font-mono text-sm overflow-x-auto border-l-4 border-noir-gold">
+<pre>def orchestrate_pipeline():
+    start_time = time.time()
+    
+    # 1. Extraction
+    raw_data = sap_connector.fetch_batch(BATCH_ID)
+    
+    # 2. Transformation
+    clean_data = apply_cleaning_rules(raw_data)
+    merged_view = merge_datasets(clean_data)
+    
+    # 3. Load to Tableau
+    tableau_pusher.upload(merged_view)
+    
+    return f"Completed in {time.time() - start_time} seconds"</pre>
+</div>
+<p>
+                            The result is a fully refreshed Tableau dashboard ready for review by 8:00 AM Monday. The total runtime has been reduced from 3 days to approximately <strong>4 minutes</strong>.
+                        </p>
+</div>
+<!-- ROI Visualizer -->
+<div class="mt-12">
+<h3 class="font-serif font-bold text-2xl mb-6 border-b border-noir-black pb-2">Impact Analysis</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+<!-- Chart -->
+<div class="h-64 flex items-end gap-6 p-6 bg-noir-surface border border-noir-black">
+<div class="w-full flex flex-col justify-end gap-2 group cursor-pointer">
+<span class="text-xs font-mono text-center opacity-0 group-hover:opacity-100 transition-opacity">85 Hours</span>
+<div class="w-full bg-noir-black h-48 relative"></div>
+<span class="text-xs font-mono uppercase tracking-widest text-center mt-2 border-t border-black pt-2">Manual</span>
+</div>
+<div class="w-full flex flex-col justify-end gap-2 group cursor-pointer">
+<span class="text-xs font-mono text-center opacity-0 group-hover:opacity-100 transition-opacity text-noir-gold font-bold">4 Mins</span>
+<div class="w-full bg-noir-gold h-1 relative"></div>
+<span class="text-xs font-mono uppercase tracking-widest text-center mt-2 border-t border-black pt-2">Auto</span>
+</div>
+</div>
+<!-- Key Metrics -->
+<div class="space-y-6">
+<div>
+<p class="text-sm font-mono text-noir-muted uppercase tracking-widest mb-1">Processing Speed</p>
+<p class="text-5xl font-mono text-noir-gold font-medium">99.2%</p>
+<p class="text-sm font-sans font-bold">Reduction in wait time</p>
+</div>
+<div>
+<p class="text-sm font-mono text-noir-muted uppercase tracking-widest mb-1">Capacity Recovered</p>
+<p class="text-4xl font-serif text-noir-black">2 FTEs</p>
+<p class="text-sm font-sans text-noir-text/70">Reallocated to strategy</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Sidebar (Summary Box) -->
+<div class="lg:col-span-4 relative">
+<div class="sticky top-24 space-y-8">
+<!-- Summary Card -->
+<div class="bg-white border-2 border-noir-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+<h3 class="font-serif font-bold text-xl mb-6 border-b border-noir-black pb-3">Project Specs</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-mono text-noir-muted uppercase tracking-widest mb-1">Team Leads</p>
+<p class="font-sans font-medium text-lg">Sarah Jenkins, Mike Ross</p>
+</div>
+<div>
+<p class="text-xs font-mono text-noir-muted uppercase tracking-widest mb-1">Timeline</p>
+<p class="font-sans font-medium text-lg">Q3 2023 - Q4 2023</p>
+</div>
+<div>
+<p class="text-xs font-mono text-noir-muted uppercase tracking-widest mb-1">Tech Stack</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-1 bg-noir-surface border border-noir-black text-xs font-mono">Python</span>
+<span class="px-2 py-1 bg-noir-surface border border-noir-black text-xs font-mono">SQL</span>
+<span class="px-2 py-1 bg-noir-surface border border-noir-black text-xs font-mono">Tableau</span>
+<span class="px-2 py-1 bg-noir-surface border border-noir-black text-xs font-mono">Airflow</span>
+</div>
+</div>
+<div>
+<p class="text-xs font-mono text-noir-muted uppercase tracking-widest mb-1">Status</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+</span>
+<span class="font-sans font-bold text-emerald-700">Live &amp; Active</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-dashed border-noir-black space-y-3">
+<button class="w-full flex items-center justify-center gap-2 h-12 bg-noir-black text-white hover:bg-noir-black/80 transition-colors font-bold text-sm tracking-wide">
+<span class="material-symbols-outlined text-lg">download</span>
+                                DOWNLOAD ONE-PAGER
+                            </button>
+<button class="w-full flex items-center justify-center gap-2 h-12 bg-transparent border border-noir-black text-noir-black hover:bg-noir-surface transition-colors font-bold text-sm tracking-wide">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+                                VIEW LIVE TOOL
+                            </button>
+</div>
+</div>
+<!-- Related Metric Card -->
+<div class="bg-noir-surface border border-noir-black p-6 opacity-60 hover:opacity-100 transition-opacity cursor-pointer hidden xl:block">
+<p class="font-serif italic text-sm mb-2 text-noir-muted">See related case study</p>
+<h4 class="font-serif font-bold text-lg mb-4">The Q1 Financial Close Automation</h4>
+<div class="h-1 w-12 bg-noir-gold"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-noir-black text-white py-12 px-6 border-t-4 border-noir-gold">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div>
+<h2 class="font-serif font-bold text-2xl mb-2">Kantar Efficiency &amp; Automation</h2>
+<p class="font-sans text-noir-muted text-sm max-w-md">Empowering North America Operations through intelligent process design and algorithmic precision.</p>
+</div>
+<div class="flex gap-8 text-sm font-mono text-noir-muted">
+<a class="hover:text-white transition-colors" href="#">Documentation</a>
+<a class="hover:text-white transition-colors" href="#">API Status</a>
+<a class="hover:text-white transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

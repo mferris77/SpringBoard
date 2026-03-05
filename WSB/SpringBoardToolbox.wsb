@@ -1,0 +1,21 @@
+<Configuration>
+  <VGpu>Disabled</VGpu>
+  <Networking>Default</Networking>
+  <MappedFolders>
+    <!-- Tool Execution Workspace (Read/Write) -->
+    <MappedFolder>
+      <HostFolder>C:\DEV\AI\SpringBoard\sandbox_workspace</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Documents\Workspace</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+    <!-- Shared Assets / Python Scripts (Read-Only) -->
+    <MappedFolder>
+      <HostFolder>C:\DEV\AI\SpringBoard\services\springboard-python</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Documents\Scripts</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>powershell.exe -ExecutionPolicy Bypass -File C:\Users\WDAGUtilityAccount\Documents\Scripts\setup_sandbox_env.ps1</Command>
+  </LogonCommand>
+</Configuration>

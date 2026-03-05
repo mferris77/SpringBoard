@@ -1,0 +1,9 @@
+{
+  "name": "springboard-electron-python",
+  "private": true,
+  "version": "0.1.0",
+  "description": "SpringBoard planning workspace (Sprint 0 - no framework install yet)",
+  "scripts": {
+    "sprint0:status": "echo Sprint 0 planning mode - bootstrap/install deferred to Sprint 1 (owner-run via npx create-vite)"
+  }
+}

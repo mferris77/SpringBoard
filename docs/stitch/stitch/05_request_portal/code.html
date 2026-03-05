@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request Portal | Kantar Efficiency &amp; Automation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Gold
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#000000",
+                        "surface-dark": "#111111",
+                        "surface-light": "#F4F4F4",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "none": "0px",
+                        "DEFAULT": "0px", // Sharp corners
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for specific form behaviors */
+        .input-underline {
+            background-color: transparent;
+            border-bottom: 2px solid #333;
+            transition: border-color 0.3s ease;
+        }
+        .input-underline:focus-within {
+            border-color: #D4AF37;
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-sans antialiased min-h-screen flex flex-col selection:bg-[#D4AF37] selection:text-black">
+<!-- Global Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#333] bg-background-dark/95 backdrop-blur supports-[backdrop-filter]:bg-background-dark/60">
+<div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 bg-white text-black flex items-center justify-center font-serif font-bold text-xl">K</div>
+<div class="flex flex-col">
+<span class="font-serif font-bold text-lg tracking-tight leading-none text-white">KANTAR</span>
+<span class="text-xs font-mono text-[#9CA3AF] tracking-wide uppercase mt-1">Efficiency &amp; Automation</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-[#9CA3AF] hover:text-white transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-[#9CA3AF] hover:text-white transition-colors" href="#">Project Index</a>
+<a class="text-sm font-medium text-[#9CA3AF] hover:text-white transition-colors" href="#">Tool Launcher</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-white hover:text-[#D4AF37] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-white hover:text-[#D4AF37] transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8 max-w-[960px] mx-auto w-full">
+<!-- Header Section -->
+<div class="w-full mb-16 border-l-2 border-[#D4AF37] pl-8">
+<h1 class="font-serif font-bold text-5xl md:text-6xl text-white mb-4 tracking-tight leading-none">
+                New Initiative Request
+            </h1>
+<p class="font-serif italic text-xl md:text-2xl text-[#9CA3AF]">
+                Define the parameters for your efficiency needs. All proposals are reviewed by the NA Operations leadership team.
+            </p>
+</div>
+<!-- Form Container -->
+<form class="w-full flex flex-col gap-16">
+<!-- Step 1: Category Selection -->
+<section>
+<div class="flex items-center justify-between mb-8 border-b border-[#333] pb-4">
+<h2 class="font-serif font-bold text-2xl text-white">01. Select Category</h2>
+<span class="font-mono text-xs text-[#D4AF37] uppercase tracking-wider">Required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Option 1: Data Processing -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="category" type="radio" value="data"/>
+<div class="aspect-square flex flex-col justify-between p-8 border border-[#333] bg-[#111] transition-all duration-300 peer-checked:bg-white peer-checked:border-white group-hover:border-[#666]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-[#666] peer-checked:text-black transition-colors">dataset</span>
+<div class="w-4 h-4 border border-[#333] rounded-none peer-checked:bg-black peer-checked:border-black transition-colors"></div>
+</div>
+<div>
+<h3 class="font-serif font-bold text-2xl text-white peer-checked:text-black mb-2">Data Processing</h3>
+<p class="text-sm text-[#9CA3AF] peer-checked:text-[#333] font-sans leading-relaxed">
+                                    Automated cleaning, restructuring, and formatting of raw survey data.
+                                </p>
+</div>
+</div>
+</label>
+<!-- Option 2: Scripting -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="category" type="radio" value="scripting"/>
+<div class="aspect-square flex flex-col justify-between p-8 border border-[#333] bg-[#111] transition-all duration-300 peer-checked:bg-white peer-checked:border-white group-hover:border-[#666]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-[#666] peer-checked:text-black transition-colors">code</span>
+<div class="w-4 h-4 border border-[#333] rounded-none peer-checked:bg-black peer-checked:border-black transition-colors"></div>
+</div>
+<div>
+<h3 class="font-serif font-bold text-2xl text-white peer-checked:text-black mb-2">Scripting</h3>
+<p class="text-sm text-[#9CA3AF] peer-checked:text-[#333] font-sans leading-relaxed">
+                                    Custom logic, survey routing, and complex quota management scripts.
+                                </p>
+</div>
+</div>
+</label>
+<!-- Option 3: Reporting -->
+<label class="group cursor-pointer relative">
+<input class="peer sr-only" name="category" type="radio" value="reporting"/>
+<div class="aspect-square flex flex-col justify-between p-8 border border-[#333] bg-[#111] transition-all duration-300 peer-checked:bg-white peer-checked:border-white group-hover:border-[#666]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-[#666] peer-checked:text-black transition-colors">bar_chart</span>
+<div class="w-4 h-4 border border-[#333] rounded-none peer-checked:bg-black peer-checked:border-black transition-colors"></div>
+</div>
+<div>
+<h3 class="font-serif font-bold text-2xl text-white peer-checked:text-black mb-2">Reporting</h3>
+<p class="text-sm text-[#9CA3AF] peer-checked:text-[#333] font-sans leading-relaxed">
+                                    Dashboard generation, PowerPoint automation, and visual outputs.
+                                </p>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Step 2: Project Details -->
+<section>
+<div class="flex items-center justify-between mb-12 border-b border-[#333] pb-4">
+<h2 class="font-serif font-bold text-2xl text-white">02. Project Details</h2>
+<span class="font-mono text-xs text-[#9CA3AF] uppercase tracking-wider">Confidential</span>
+</div>
+<div class="space-y-12">
+<!-- Project Title -->
+<div class="group relative">
+<input class="block w-full bg-transparent border-0 border-b-2 border-[#333] text-white text-3xl font-serif font-bold px-0 py-4 focus:ring-0 focus:border-[#D4AF37] placeholder-shown:border-[#333] transition-colors peer" id="project_title" name="project_title" placeholder=" " required="" type="text"/>
+<label class="absolute left-0 -top-3.5 text-[#9CA3AF] text-sm font-mono transition-all peer-placeholder-shown:text-xl peer-placeholder-shown:text-[#666] peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-[#D4AF37] peer-focus:text-sm" for="project_title">
+                            Project Title / Code
+                        </label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Business Unit -->
+<div class="group relative">
+<select class="block w-full bg-transparent border-0 border-b-2 border-[#333] text-white text-lg font-sans px-0 py-4 focus:ring-0 focus:border-[#D4AF37] transition-colors appearance-none cursor-pointer" id="business_unit" name="business_unit">
+<option class="bg-[#111]" disabled="" selected="" value="">Select Unit...</option>
+<option class="bg-[#111]" value="na_creative">NA Creative</option>
+<option class="bg-[#111]" value="na_brand">NA Brand Strategy</option>
+<option class="bg-[#111]" value="na_media">NA Media Effectiveness</option>
+<option class="bg-[#111]" value="na_public">NA Public Division</option>
+</select>
+<label class="absolute left-0 -top-3.5 text-[#9CA3AF] text-sm font-mono" for="business_unit">
+                                Business Unit
+                            </label>
+<div class="absolute right-0 top-4 pointer-events-none text-[#666]">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+<!-- Manual Hours -->
+<div class="group relative">
+<input class="block w-full bg-transparent border-0 border-b-2 border-[#333] text-white text-lg font-mono px-0 py-4 focus:ring-0 focus:border-[#D4AF37] placeholder-shown:border-[#333] transition-colors peer" id="manual_hours" name="manual_hours" placeholder=" " required="" type="number"/>
+<label class="absolute left-0 -top-3.5 text-[#9CA3AF] text-sm font-mono transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-[#666] peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-[#D4AF37] peer-focus:text-sm" for="manual_hours">
+                                Estimated Manual Hours (Monthly)
+                            </label>
+<span class="absolute right-0 top-4 text-[#666] font-mono text-sm">HRS</span>
+</div>
+</div>
+<!-- Problem Description -->
+<div class="group relative mt-8">
+<textarea class="block w-full bg-transparent border-0 border-b-2 border-[#333] text-white text-lg font-sans px-0 py-4 focus:ring-0 focus:border-[#D4AF37] placeholder-shown:border-[#333] transition-colors resize-none peer" id="description" name="description" placeholder=" " required="" rows="4"></textarea>
+<label class="absolute left-0 -top-3.5 text-[#9CA3AF] text-sm font-mono transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-[#666] peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-[#D4AF37] peer-focus:text-sm" for="description">
+                            Problem Description &amp; Pain Points
+                        </label>
+<p class="mt-2 text-xs text-[#666] font-mono text-right">0/500 CHARACTERS</p>
+</div>
+<!-- File Upload Zone (Subtle) -->
+<div class="border border-dashed border-[#333] bg-[#0A0A0A] p-8 flex flex-col items-center justify-center text-center group hover:border-[#666] transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[#333] text-3xl mb-2 group-hover:text-[#D4AF37] transition-colors">attach_file</span>
+<p class="text-sm font-sans text-white">Attach Supporting Documentation</p>
+<p class="text-xs font-mono text-[#666] mt-1">PDF, XLSX, DOCX up to 10MB</p>
+</div>
+</div>
+</section>
+<!-- Submit Action -->
+<div class="pt-8">
+<button class="group w-full bg-[#D4AF37] hover:bg-[#bfa032] text-black font-serif font-bold text-xl py-6 px-8 flex items-center justify-between transition-all duration-300" type="button">
+<span>SUBMIT PROPOSAL</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+<div class="flex justify-between mt-4">
+<p class="text-xs font-mono text-[#666]">
+                        * By submitting, you agree to the internal automation governance policy.
+                    </p>
+<p class="text-xs font-mono text-[#666]">
+                        ID: REQ-2024-INT
+                    </p>
+</div>
+</div>
+</form>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full border-t border-[#333] py-8">
+<div class="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[#666]">
+<p class="text-sm font-mono">© 2024 Kantar Group Limited.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="text-xs font-mono hover:text-white transition-colors" href="#">PRIVACY</a>
+<a class="text-xs font-mono hover:text-white transition-colors" href="#">TERMS</a>
+<a class="text-xs font-mono hover:text-white transition-colors" href="#">SUPPORT</a>
+</div>
+</div>
+</footer>
+</body></html>

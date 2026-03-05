@@ -1,0 +1,155 @@
+Today we're going to be testing out a new free alternative that's open source to co-work right and 
+this is using something called Z AI. So we're going to start testing this out. As you can see right 
+here, we're going to start running it. Actually runs with GLM and essentially if you've never used 
+co-work before. It's a really powerful way to use an AI agent locally and to build whatever you 
+want. It can control your browser. It can, for example, build out coding projects. It can link to 
+stuff like anti-gravity. It can for example create spreadsheets, reports, research, etc. locally. 
+So that's called co-work. The problem is that it's a paid tool, right? Whereas you can use for 
+example something like this and we're going to test this today to see if it actually works and run 
+this locally and we should be able to use it I think for free, right? Or it's got different tiers 
+anyway. So you've got a free plan right here with 200 credits per day that refreshes, right? So 
+let's try this out. We're going to download this for Mac like you can see. And it seems pretty 
+simple. Of course, you don't need to use terminal commands or anything like that to get this 
+started, which is great. And if you're wondering, okay, like what's the point of agent, which is 
+what we're using today. These AI agents work on your desktop, so they can automate things locally. 
+And you could have a developer agent, you could have a browser agent, you could use a document 
+agent, and you can operate it in plain text in just English, which is great. You could organize 
+your desktop files, you could manage tickets for customer service. You could, for example, create 
+market research or add PDF signatures. You could even build, for example, tools or even tweet 
+directly to social media using these tools. So, it is pretty much endless in terms of what you can 
+do because it can control your whole laptop for you. And also, you don't need to be technical to 
+set this up. We just download a file and then we're good to go on this. So, we're going to test 
+this out and see how it performs today. You can see an example of it actually working here. So, it 
+can, for example, organize your desktop and you just give it commands inside the chat and then it 
+goes off and does this. Also, you can see that it's separated by different agents. So, you got 
+developer agent, blah, blah, blah. And from there, you're good to go. Also, what I really like 
+about this is that it's using GLM 4.7, and that's a model I've been very impressed with by so far. 
+If you've never used GLM 4.7, you can get this free version of it at chat.z.ai. And this can go off 
+and build all sorts of projects for you, right? So, for example, here you can see we've built out 
+websites. We've done keyword research. We've created blog posts with this. We've created full 
+animated dashboards like you can see. So the agent itself and the API that it's using is very 
+powerful. All right. So that's downloaded now. Let's try it out. So we're just going to click on 
+this to install it. Nice and easy. And then we should be able to open this up. Here we go. Just a 
+quick note here. The first time I installed this, it didn't work just a minute ago. It seems to 
+work now. Just something to be aware of. If it doesn't work, delete it, reinstall it. That should 
+fix it. Now, we're just going to open this up. And here we go. So, we just need to accept the terms 
+and conditions. And then we've got like a camb board for different AI agents. Let's pull this up. 
+What we got here? We got multimodal, browser agent, etc. So, let's just try something simple now. 
+I'm going to say, okay, please help me organize my desktop. All right. So, just to put this into 
+context. Co-work is a paid tool. This is a free one and it seems to have worked much better than 
+other stuff that I've used previously. Plus, if it's using GLM, then usually GLM is like a really 
+great way to code. All right, so from here we're going to say, okay, help me organize my desktop 
+and we'll just take a few screenshots just to fill up the desktop with loads of stuff, make it 
+really messy as much as we can. There we go. All right. And then we're going to say, please help me 
+organize my desktop. And now you can see it's actually assigning the task to different agents 
+depending on what you need to do. So they've got this task splitting feature. If you want to see 
+how this compares side by side with Claude called coowork whilst it's working. Let me show you how 
+this works. So this is Claude called coowork. This is agent. And if we type in new task, plug this 
+in, select a folder like downloads. Hit let's go using pretty much the same prompt. You can see how 
+they both look. I still think I prefer the UI of Claude Co, but it's pretty cool. And then you can 
+see here if we zoom in on agent, it's got the agent running. And then you can select which one you 
+want to do, I think. So you can copy that X. And then you can see now it's added these tasks to the 
+cam board. Right now I have to allow this to be able to access different things inside a computer. 
+So I'm just going to do that. And then I think it can actually record your screen, but I'd have to 
+reset it and stop the task that's existing. So I'm not going to do that right now, but I'll do that 
+later. And you can see this is working its magic. And then it gives you the outputs right here. 
+Reformation says, "I'm consistently amazed by how well you know how to operate, work, all of the 
+new stuff that comes out. Thanks for all that you do. It's a pleasure, mate. Absolutely happy to 
+help. So, I appreciate you watching. Thank you." So, it's listed out these tasks. We're going to 
+click on start task now. And it'll just go off and start doing this. And then you can see once the 
+task is completed, it will mark it as green as you can see. Being 100% honest, I don't think it's 
+as smooth as using something like Claude Co-work, which just has a nicer It makes everything a bit 
+easier. It gives you a few options as you're going along and it's just easier to even just to read 
+on the page. It looks easier and nicer than using something like agent. But agent is free. So, you 
+know, it's down to you whichever one you prefer. I feel like for just organizing a desktop, maybe 
+agent is has over complicated it a bit. And you can see they're working at the same time here. So, 
+this is Claude working on the downloads folder. This is agent organizing the desktop folder. But 
+what I will say is the desktop is looking a lot more clean now, right? And it's created the 
+screenshots folder right here as well. But yeah, basically the desktop has been organized. You can 
+see the tasks that have been completed. It's done five out of six tasks or it's done all six now as 
+you can see. And what it's actually done is created this desktop move plan CSV to capture the 
+screenshots and analyze the images just to make sure it's done properly. So if we click on that, 
+you can see that's been done now. and it's organized itself between a developer agent, document 
+agent, multimodial agent, and then you've got the notes on the right hand side of what's been done. 
+Right now, once that's actually finished and completed, to be fair, Claude and agent both finished 
+at the same time, right, in terms of tasks, and then it gives you a breakdown of like overall what 
+was done, what was organized, etc. And then you've got this MD file that actually shows you 
+everything that has been done. And also, you can share this, I think. So, you can actually share 
+this as a link. So if we actually go on to Chrome, we can share the link and inside the settings as 
+well, you can change this between like transparent or light. You can change the proy. You can also 
+change that you use, right? So you could, for example that you get free access to that. One thing I 
+will say is you do have a limited number of credits. But what you can also do here is you can plug 
+in your own custom model inside the settings of agent. Right? So if you have a look, you can use 
+your own custom API and then you could for example use it on Gemini or OpenAI or Anthropic or even 
+Open Router, right? You could grab a free API from Open Routter and plug that in. Same with Quinn 
+as well. Then you got Miniax, ZAI, pretty much everything you can think of. And the other really 
+cool thing here is you can actually use local models for this, right? So you could use O Lama which 
+is a free API host it like so select whichever model you want to use and the great thing about that 
+is then you're not limited by the tokens right because you can use the API inside the local model 
+section select that as your model and then use it as much as you want. You can also see the browser 
+management and the cookies here you can add MC so you can see already that we have MCPs plugged in 
+for X for WhatsApp LinkedIn Reddit GitHub and Slack in fact these are coming soon so just be aware 
+that these MCPS are coming they're not installed already. But then you do have like for example 
+Gmail, Slack, Google Calendar, Notion, and Lark as the ideas here. You can also change your default 
+search engine as well inside the settings here. And then inside the projects, you've got the 
+previous operations you ran, right? And you can see how many tokens I used up as well. So let's try 
+something else now. I'm going to say, okay, research the latest AI news, then go to x.com and post 
+a tweet about the latest AI news in short bullet point format, making it fun plus interesting. 
+Let's see if it can operate that. So, we're going to hit go right now. The one thing that I would 
+say is I don't know if it's going to use your existing Chrome or if it's going to use like a 
+Chromium because if it uses Chromium, then it's not going to be logged into X and it won't be able 
+to work. So, we'd have to log in separately and that'd be super annoying. But, let's see what it 
+does. Overall though, I mean it does seem like a worthy competitor of coowork, especially because 
+of the free element and also it's open source. We can do the same thing inside claude as well. 
+Claude co-work just to test them out side by side and we'll see which one performs the best. So it 
+breaks the task down into what it's going to do. Here's the tasks etc. As you can see once you type 
+in the prompt it will give you the tasks and then you need to click on start task at the bottom 
+once that's done. So we'll compare them side by side. Claw co-work over here versus AI agent. So 
+far, it seems like co-work is going to do this a lot faster. But let's see. Here we go. So, it's 
+gone to x.com. You can either look inside the Chrome browser and see what's going on, or you can 
+just have a look inside here and see what it's doing as well. When you're using Claude Co., it's 
+also writing the post as you can see here. So, this is Claude Co that's actually doing its magic. 
+Whereas AI agent, I think, is still stuck in the research phase. You can see it just browsing the 
+internet right here. And then Claude Co actually asked for permission before publishing the post. 
+I'm going to say okay, yes. Another limitation of agent as well as you can see is like it's using 
+the actual browser to research when really what it should be doing is just searching the internet 
+using like a web search right it doesn't need to actually physically go on the pages to to research 
+the web like you can see with claude coowork it moved a lot faster because it's not using a browser 
+agent it's just searching inside the chat finding information and then posting the tweet like you 
+can see here right if we say okay what's the link to the tweet inside coowork it's now grabbed the 
+link as you can see and we've got the link here. So claw coworker was a lot faster with AI agent. 
+It's okay. It's doing the task, but it's taking a lot longer. And also one of the biggest issues 
+here is it's actually asking for my login credentials, which I don't want to type inside the chat. 
+I don't want to give that away to the agent, right? So that's annoying as well. I could type inside 
+here, just log in manually. However, overall, I would say agent is decent considering you can use 
+it for free. Bear in mind, it's free and open source. You can build custom multi-agent workflows. 
+It runs locally. It automates browser terminal files and everything and it can automate a lot of 
+tasks right here. So if you want to get the setup instructions, all the resources from today, you 
+get that inside the AI success lab along with a 30-day plan for really mastering agent automation. 
+And then also what I've included inside here is a list of 100 prompts that you can use and test 
+inside agent as well. I do think is a free option. It's pretty decent. And then if you want to get 
+the notes from today, it's all inside the AI success lab which connects you with 46,500 people as 
+you can see. And also inside the classroom here, if you just go to this section, you can find the 
+video notes from today. If you want to get help and support and really grow and scale with AI 
+automation, join the AI profit boardroom link in the description. This is an amazing community that 
+helps you automate your business and save time with AI. It's based on all of my playbooks that work 
+for me. You can see inside the community here is very active and you can post any questions you 
+have and get help and support whenever you need it pretty much 24/7 because there's 2,100 members 
+in here. So, there's always people online. Like it's a big community of people just helping each 
+other, right? And you can see everyone just winning and learning and growing together. Like you can 
+see also inside here we have an accountability group. So you can post questions, post your goals 
+for the day, help you avoid overwhelm, help you avoid information overload, etc. Because you just 
+post your goals like you can see Kevin's done right here and then just stay 100% focused on what 
+you need to achieve today, right? And that's the best mindset I think as well. Also, you can jump 
+on live coaching calls. If you ever get stuck with anything, you need live technical support, you 
+can do that on the coaching calls. Inside the classroom here, we have a six week AI automation road 
+map that takes you from complete beginner to expert with AI automation. Plus, you learn how to 
+build your first AI agent in under 5 minutes. As well as that, you'll get all of our best playbooks 
+for automating avatar videos, shorts, newsletters, Twitter automations, etc. You'll learn how to 
+get clients inside our agency course based on what's working for me. You can watch back the 
+coaching call recordings if you ever don't get time to turn up on live ones. And also you'll learn 
+our best for automations for SEO, so ranking inside Google and also AI search engines as well as a 
+six week road map to grow a YouTube channel based on what's working for me. So that's all inside 
+the AI profit boardroom. Feel free to get it. Link in the comments description or just go to 
+aiprofitboardroom.com. Okay, so thanks so much for watching today. Appreciate it. I'll see you on 
+the next one. Cheers.

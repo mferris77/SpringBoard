@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kantar Efficiency - Project Index</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent": "#D4AF37",
+                        "surface": "#F4F4F4",
+                        "text-main": "#111111",
+                        "text-muted": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "none": "0px",
+                        "sm": "0px",
+                        "md": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px", // Only allowed for pills if absolutely necessary, but design says sharp corners everywhere. Keeping pills sharp based on 'Corporate Noir' description but 'Pill shape' in PRD might imply full radius. I will use full for tags as per PRD 'Pill shape' but 0px for cards/buttons.
+                    },
+                    borderWidth: {
+                        "3": "3px",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for that premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFFFF; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000000; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333333; 
+        }
+        
+        .hover-card-trigger:hover .card-border-target {
+            border-width: 3px;
+        }
+        
+        .hover-card-trigger:hover .card-img-target {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* Sticky Filter Bar offset */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .sticky-filters {
+            position: sticky;
+            top: 73px; /* Adjust based on header height */
+            z-index: 40;
+        }
+    </style>
+</head>
+<body class="bg-white text-text-main font-sans min-h-screen flex flex-col selection:bg-accent selection:text-white antialiased">
+<!-- Global Header -->
+<header class="sticky-header w-full bg-white border-b border-black h-[73px] flex items-center justify-between px-6 md:px-12 transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="size-8 bg-black flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+</div>
+<h1 class="font-serif font-bold text-xl tracking-tight">Kantar <span class="font-normal italic">Efficiency</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-accent border-b border-accent pb-0.5" href="#">Index</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Launchpad</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Request Portal</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="size-8 bg-black rounded-full overflow-hidden border border-black hidden sm:block">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="User avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgV2H5k-wpIDjdpKx70wVXUVbRXwhonmZOINIUClVvLOaPELlwhClMxIYaku_Ysk8wc_2KIuVROnKGSy2f-_Gm7OUembRT_x2oAFrsM8Uyt-mAeCtxA-cHWuIfdWbBSzp7Wykn4YpxLLnjMBImwDndqy_qU8dCce4V109Uy_XXvpphTsRD1XaHMB5C1qyDBJAGfp_tuOJ8CaulSlzoaxJ3he4k2LUFIw_tMJy8sSC1-ZP8Us8LsWqaIPsxb8JqfydZkiQUUGispw"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section class="px-6 md:px-12 py-16 md:py-24 border-b border-black bg-white">
+<div class="max-w-4xl">
+<p class="font-mono text-xs uppercase tracking-widest text-text-muted mb-4">Internal Archive // North America</p>
+<h2 class="font-serif font-bold text-5xl md:text-7xl leading-none mb-6 text-black tracking-tight">
+                    Innovation Index
+                </h2>
+<p class="font-serif italic text-xl md:text-2xl text-text-muted max-w-2xl leading-relaxed">
+                    Archival proof of work. Browse all advanced processing initiatives, automation workflows, and confirmed efficiency gains.
+                </p>
+</div>
+</section>
+<!-- Technical Spec Filter Bar -->
+<div class="sticky-filters w-full bg-white border-b border-black px-6 md:px-12 py-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex flex-wrap items-center gap-8 w-full md:w-auto">
+<div class="group relative cursor-pointer">
+<div class="flex items-center gap-2 pb-1 border-b-2 border-transparent group-hover:border-accent transition-all">
+<span class="font-mono text-xs uppercase tracking-wider text-text-muted group-hover:text-black">Department</span>
+<span class="font-serif font-bold text-lg">All Departments</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<!-- Dropdown Content (Hidden) -->
+</div>
+<div class="group relative cursor-pointer">
+<div class="flex items-center gap-2 pb-1 border-b-2 border-accent transition-all">
+<span class="font-mono text-xs uppercase tracking-wider text-text-muted group-hover:text-black">Status</span>
+<span class="font-serif font-bold text-lg">Deployed</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<div class="group relative cursor-pointer">
+<div class="flex items-center gap-2 pb-1 border-b-2 border-transparent group-hover:border-accent transition-all">
+<span class="font-mono text-xs uppercase tracking-wider text-text-muted group-hover:text-black">Year</span>
+<span class="font-serif font-bold text-lg">2024</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto border-l border-gray-200 pl-0 md:pl-8">
+<span class="font-mono text-xs text-text-muted uppercase">Showing 12 Results</span>
+<div class="flex gap-2 ml-auto">
+<button class="p-2 hover:bg-surface border border-transparent hover:border-black transition-all">
+<span class="material-symbols-outlined text-xl">view_module</span>
+</button>
+<button class="p-2 hover:bg-surface border border-transparent hover:border-black transition-all opacity-50">
+<span class="material-symbols-outlined text-xl">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Masonry Grid -->
+<section class="px-6 md:px-12 py-12 bg-white">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: High Impact -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl relative card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-NA-24</span>
+<span class="font-mono text-xs text-text-muted">FEB 2024</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Cross-Tab Generator</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                Automated generation of standard cross-tabulation reports from raw survey data, reducing analyst manual formatting time.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Data Processing</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Python</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">+400% <span class="text-sm text-black align-middle ml-1">Speed Increase</span></p>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-NLP-09</span>
+<span class="font-mono text-xs text-text-muted">JAN 2024</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Verbatim Coder</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                AI-assisted coding of open-ended survey responses using natural language processing models.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Analytics</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">AI/ML</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">120hrs <span class="text-sm text-black align-middle ml-1">Saved / Mo</span></p>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-OPS-11</span>
+<span class="font-mono text-xs text-text-muted">DEC 2023</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Survey Logic Bot</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                Automated validation of survey logic paths and skip patterns prior to field deployment.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Quality Assurance</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Scripting</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">0% <span class="text-sm text-black align-middle ml-1">Error Rate</span></p>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-LOG-02</span>
+<span class="font-mono text-xs text-text-muted">NOV 2023</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Global Logistics Reset</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                Supply chain data integration overhaul for major FMCG client, unifying 14 data streams.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Consulting</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Big Data</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">$50k <span class="text-sm text-black align-middle ml-1">Annual Savings</span></p>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-FIN-88</span>
+<span class="font-mono text-xs text-text-muted">OCT 2023</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Invoice Matcher</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                Automated reconciliation of vendor invoices against internal POs using fuzzy matching logic.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Finance</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">RPA</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">95% <span class="text-sm text-black align-middle ml-1">Match Rate</span></p>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="hover-card-trigger group flex flex-col h-full bg-white border border-black p-0 transition-all duration-200 hover:shadow-2xl card-border-target">
+<div class="p-8 flex flex-col h-full gap-6">
+<div class="flex justify-between items-start border-b border-gray-100 pb-4">
+<span class="font-mono text-xs font-medium text-black">KAN-HR-05</span>
+<span class="font-mono text-xs text-text-muted">SEP 2023</span>
+</div>
+<div class="flex-grow space-y-3">
+<h3 class="font-serif font-bold text-3xl leading-tight group-hover:underline decoration-accent decoration-2 underline-offset-4">Talent Scraper</h3>
+<p class="font-sans text-sm text-text-muted leading-relaxed">
+                                Aggregates candidate profiles from specialized job boards into internal ATS automatically.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">HR Tech</span>
+<span class="px-3 py-1 bg-white border border-black rounded-full font-mono text-[10px] font-bold uppercase tracking-wide">Web Scraping</span>
+</div>
+<div class="pt-6 mt-auto border-t border-black">
+<p class="font-mono text-3xl text-accent font-medium">20hr <span class="text-sm text-black align-middle ml-1">Weekly Reduction</span></p>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State (Hidden by default, shown for structure completeness) -->
+<div class="hidden flex-col items-center justify-center py-32 border border-black border-dashed mt-12 bg-surface/20">
+<span class="material-symbols-outlined text-4xl text-text-muted mb-4">filter_list_off</span>
+<p class="font-serif italic text-2xl text-text-muted">No initiatives match your criteria.</p>
+<button class="mt-6 text-xs font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-accent hover:border-accent transition-colors">Clear Filters</button>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-16">
+<button class="group relative px-8 py-3 bg-white border border-black text-black font-serif font-bold hover:bg-black hover:text-white transition-all duration-300">
+<span class="relative z-10 flex items-center gap-2">
+                        Load More Archives
+                        <span class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform">arrow_downward</span>
+</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black text-white px-6 md:px-12 py-12 mt-auto border-t border-accent">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<div>
+<h4 class="font-serif font-bold text-2xl mb-2">Kantar Efficiency</h4>
+<p class="font-mono text-xs text-gray-400">North America Operations Group</p>
+</div>
+<div class="flex gap-8 font-mono text-xs text-gray-400">
+<a class="hover:text-accent transition-colors" href="#">Internal Privacy</a>
+<a class="hover:text-accent transition-colors" href="#">Documentation</a>
+<a class="hover:text-accent transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

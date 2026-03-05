@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Dashboard - Kantar Efficiency &amp; Automation</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6b919", // Gold
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#121212", // Deep black/grey for noir feel
+                        "surface-dark": "#1a1a1a",
+                        "border-dark": "#333333",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px", // Strict sharp corners per PRD
+                        "sm": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e6b919; 
+        }
+
+        /* Image grayscale to color transition */
+        .noir-img {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .group:hover .noir-img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white antialiased font-display selection:bg-primary selection:text-black">
+<div class="min-h-screen flex flex-col">
+<!-- Sticky Minimalist Header -->
+<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/95 backdrop-blur supports-[backdrop-filter]:bg-background-dark/60">
+<div class="max-w-[1400px] mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
+<div class="flex items-center gap-4">
+<div class="h-8 w-8 text-white flex items-center justify-center border border-white/20">
+<span class="material-symbols-outlined text-xl">dataset</span>
+</div>
+<div class="flex flex-col">
+<span class="font-serif text-lg font-bold tracking-tight text-white leading-none">KANTAR</span>
+<span class="font-mono text-[10px] text-gray-400 uppercase tracking-widest leading-none mt-1">Efficiency &amp; Automation</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-white hover:text-primary transition-colors uppercase tracking-widest border-b border-transparent hover:border-primary pb-1" href="#">Dashboard</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-widest pb-1" href="#">Project Index</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-widest pb-1" href="#">Launchpad</a>
+<a class="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-widest pb-1" href="#">Request Portal</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-surface-dark border border-border-dark flex items-center justify-center">
+<span class="font-serif text-xs italic text-primary">JD</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-12 flex flex-col gap-16">
+<!-- Split Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-border-dark pb-16">
+<!-- Left: Massive Headline -->
+<div class="lg:col-span-7 flex flex-col justify-end">
+<h1 class="font-serif text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[0.9] tracking-tighter text-white mb-6">
+                        Validating Impact.<br/>
+<span class="text-gray-500 font-normal italic">Accelerating Workflows.</span>
+</h1>
+<div class="flex items-center gap-4 mt-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="font-mono text-xs text-primary uppercase tracking-widest">North America Operations Group</p>
+</div>
+</div>
+<!-- Right: Live Ticker -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-dark border border-border-dark p-8 md:p-10 h-full flex flex-col justify-between group relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">timer</span>
+</div>
+<div>
+<p class="font-display text-sm text-gray-400 uppercase tracking-widest mb-2">Total Efficiency Gains (YTD)</p>
+<div class="flex items-baseline gap-2">
+<span class="font-mono text-5xl md:text-6xl font-bold text-primary tracking-tighter">14,203</span>
+<span class="font-mono text-xl text-gray-500">HRS</span>
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="font-serif text-lg text-white italic">Processing Velocity</span>
+<span class="font-mono text-primary">+24%</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="font-serif text-lg text-white italic">Error Reduction</span>
+<span class="font-mono text-primary">-8.5%</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="font-serif text-lg text-white italic">Tools Deployed</span>
+<span class="font-mono text-primary">12</span>
+</div>
+</div>
+<div class="mt-8 pt-4">
+<a class="inline-flex items-center gap-2 text-white hover:text-primary transition-colors group/link" href="#">
+<span class="font-display text-sm font-bold uppercase tracking-widest">View Full Report</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Wins Grid -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-serif text-3xl text-white">Featured Wins</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 border border-border-dark flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 border border-border-dark flex items-center justify-center bg-white text-black">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<article class="group relative bg-surface-dark border border-border-dark hover:border-primary transition-colors duration-300 flex flex-col h-[480px]">
+<div class="relative w-full h-[240px] overflow-hidden bg-black border-b border-border-dark">
+<img alt="Abstract server rack visualization representing automation infrastructure" class="w-full h-full object-cover noir-img" data-alt="Abstract server rack visualization representing automation infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMdtWbhkDB8LCD5V3WOWceqR-R2c9hEi7SEPeneEetKpVMsXdEgyd_fh7QtvuQWtTuYO18Fk1AUYm7R1jrPE06zYWPQdFu8MizeZsfPz4rgXO2aftkMO2N2q9cMpWfKhwBWxgF-HxOZhVISo5M8j2H-yo3ZRrAs97RffHSUXaRL8iDgBAVqQ5n7Eox486TRTgDPBDpMsBeb--BCmhaulsYOwIcdtqnJxabJSq3yuxg8jwviUxhp4oQlOxMLJ43GCPqen1HcDKLg"/>
+<div class="absolute top-4 left-4 bg-black/80 backdrop-blur px-3 py-1 border border-white/10">
+<span class="font-mono text-xs text-primary uppercase">Automation</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-mono text-xs text-gray-500 mb-2 block">PROJECT KAN-04</span>
+<h3 class="font-serif text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Survey Logic Automation</h3>
+<p class="font-display text-sm text-gray-400 line-clamp-3">Automating complex logic checks within survey instruments to reduce manual QA time.</p>
+</div>
+<div class="border-t border-white/10 pt-4 mt-4 flex items-center justify-between">
+<span class="font-serif italic text-gray-300">Impact</span>
+<span class="font-mono text-xl font-bold text-primary">+400% SPEED</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group relative bg-surface-dark border border-border-dark hover:border-primary transition-colors duration-300 flex flex-col h-[480px]">
+<div class="relative w-full h-[240px] overflow-hidden bg-black border-b border-border-dark">
+<img alt="Close up of code on a screen representing software development" class="w-full h-full object-cover noir-img" data-alt="Close up of code on a screen representing software development" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpfmrm2AfJrW4JimlHgKMgrHV4LFqKKRiWwxvs0cl4OI5KMl3en819W2AYxnL-ImDz4w0gRB4wIUcuHOV-rfPh_58Dg94OA9453wUqY7vNNAFU7RjoCVK2F0cyHPuUdWySmlIaBOLDj2ubZjtNavL8ko1b9l_rd0rOATauOp18XJxqBUq-Yf_U-eZKLlS2HjC5IKynu6p7VlWQqIq9ozb4jtILrFUcFN_G-3G0vcp-nxPUdNFEoTuYalzB2HfesYFks1yFBKq9cw"/>
+<div class="absolute top-4 left-4 bg-black/80 backdrop-blur px-3 py-1 border border-white/10">
+<span class="font-mono text-xs text-primary uppercase">Development</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-mono text-xs text-gray-500 mb-2 block">PROJECT KAN-12</span>
+<h3 class="font-serif text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Verbatim Auto-Coder</h3>
+<p class="font-display text-sm text-gray-400 line-clamp-3">Leveraging NLP to automatically code open-ended survey responses with high accuracy.</p>
+</div>
+<div class="border-t border-white/10 pt-4 mt-4 flex items-center justify-between">
+<span class="font-serif italic text-gray-300">Savings</span>
+<span class="font-mono text-xl font-bold text-primary">$45K / QTR</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group relative bg-surface-dark border border-border-dark hover:border-primary transition-colors duration-300 flex flex-col h-[480px]">
+<div class="relative w-full h-[240px] overflow-hidden bg-black border-b border-border-dark">
+<img alt="Abstract global map network connection visualization" class="w-full h-full object-cover noir-img" data-alt="Abstract global map network connection visualization" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY6ogrDurzSW-SokFgnKi96ulRI2FUlw27zxZ6e1UtwooGYlOPlhERcdszeLXoVOYXK51rhUBoKH9UhD6Txl5cjAWlvZc-V0updErIfiAI8PtfRWXEqA_qt5MV4wLFpH00Jj3UatI_KkzbH7dwU8zq1T7ueOVWEn6vMP5I59GmvZeLVWPN7D5Z73PiqUGlUwNiQBQAFNv3RRimYvKjBjZy0TB3X048MUdu-NLrdipQ8pt6QrGwcXNPQygZRFqD1e9hk83q25qD5w"/>
+<div class="absolute top-4 left-4 bg-black/80 backdrop-blur px-3 py-1 border border-white/10">
+<span class="font-mono text-xs text-primary uppercase">Logistics</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-mono text-xs text-gray-500 mb-2 block">PROJECT KAN-09</span>
+<h3 class="font-serif text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Global Logistics Reset</h3>
+<p class="font-display text-sm text-gray-400 line-clamp-3">Standardizing data intake protocols across 14 regional markets.</p>
+</div>
+<div class="border-t border-white/10 pt-4 mt-4 flex items-center justify-between">
+<span class="font-serif italic text-gray-300">Turnaround</span>
+<span class="font-mono text-xl font-bold text-primary">2D REDUCTION</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Manifesto / Text Block -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 border-t border-border-dark">
+<div class="lg:col-span-4">
+<p class="font-mono text-primary text-xs uppercase tracking-widest mb-4">Our Mission</p>
+<h2 class="font-serif text-4xl text-white italic">The Standard of Excellence.</h2>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="font-serif text-lg text-gray-300 leading-relaxed mb-6">
+                            "We do not merely process data; we engineer the future of market intelligence. By stripping away inefficiency, we reveal the true signal within the noise."
+                        </p>
+<div class="w-12 h-[2px] bg-primary mb-4"></div>
+<p class="font-display text-sm text-gray-500">
+                            Our mandate is simple: Eliminate redundancy. Automate the predictable. Empower the creative. Every tool deployed is a promise kept to our stakeholders.
+                        </p>
+</div>
+<div class="flex flex-col justify-between h-full bg-surface-dark p-6 border border-border-dark">
+<div>
+<p class="font-mono text-xs text-gray-500 mb-2">ACTIVE INITIATIVES</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white/20 text-white text-xs font-mono">NLP PROCESSING</span>
+<span class="px-3 py-1 border border-white/20 text-white text-xs font-mono">AUTO-TABULATION</span>
+<span class="px-3 py-1 border border-white/20 text-white text-xs font-mono">REAL-TIME DASHBOARDS</span>
+</div>
+</div>
+<div class="mt-8">
+<a class="block w-full bg-white text-black text-center py-3 font-display text-sm font-bold hover:bg-primary transition-colors uppercase tracking-widest" href="#">
+                                Request Innovation
+                            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-border-dark bg-surface-dark py-8 mt-auto">
+<div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-600">copyright</span>
+<span class="font-display text-xs text-gray-600 uppercase tracking-widest">2024 Kantar NA Operations</span>
+</div>
+<div class="flex gap-6">
+<a class="font-display text-xs text-gray-500 hover:text-white uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="font-display text-xs text-gray-500 hover:text-white uppercase tracking-widest" href="#">Internal Use Only</a>
+</div>
+</div>
+</footer>
+</div>
+<!-- Skeleton Loader Example (Hidden by default, can be toggled to test) -->
+<!-- 
+    <div class="fixed inset-0 z-[100] bg-background-dark flex items-center justify-center hidden">
+        <div class="flex flex-col items-center gap-4">
+            <div class="w-16 h-16 border border-primary/30 rounded-full flex items-center justify-center animate-pulse">
+                <span class="material-symbols-outlined text-primary text-3xl">hourglass_empty</span>
+            </div>
+            <p class="font-mono text-primary text-xs tracking-[0.2em] animate-pulse">INITIALIZING...</p>
+        </div>
+    </div> 
+    -->
+</body></html>
