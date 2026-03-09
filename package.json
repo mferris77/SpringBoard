@@ -1,9 +1,30 @@
 {
-  "name": "springboard-electron-python",
+  "name": "springboard-monorepo",
   "private": true,
   "version": "0.1.0",
-  "description": "SpringBoard planning workspace (Sprint 0 - no framework install yet)",
+  "description": "SpringBoard Local-First AI Assistant - Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "sprint0:status": "echo Sprint 0 planning mode - bootstrap/install deferred to Sprint 1 (owner-run via npx create-vite)"
+    "dev": "npm run dev --workspace=apps/springboard-desktop",
+    "dev:backend": "npm run dev --workspace=apps/springboard-backend",
+    "dev:python": "cd services/springboard-python && python src/main.py",
+    "build": "npm run build --workspaces",
+    "build:desktop": "npm run build --workspace=apps/springboard-desktop",
+    "build:backend": "npm run build --workspace=apps/springboard-backend",
+    "build:contracts": "npm run build --workspace=packages/springboard-contracts",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "npm run format --workspaces --if-present",
+    "clean": "rm -rf apps/*/dist apps/*/node_modules packages/*/dist packages/*/node_modules node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.5"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }

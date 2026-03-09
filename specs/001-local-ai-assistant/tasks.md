@@ -81,14 +81,14 @@ Phase 8: Polish & Cross-Cutting (all stories)
 
 **Purpose**: Initialize project structure, configure build tools, establish development environment
 
-- [ ] T001 Initialize Node.js backend project structure in `apps/springboard-backend/`
+- [X] T001 Initialize Node.js backend project structure in `apps/springboard-backend/`
   - `package.json` with base dependencies (Node.js (Electron Main process), TypeScript, Node 20 target)
   - `tsconfig.json` with TypeScript compiler options
   - `.eslintrc.json` and `.prettierrc.json` for code standards
   - `jest.config.js` for unit testing framework
   - Create folders: `src/`, `tests/`, `dist/`, `__mocks__/`
 
-- [ ] T002 Initialize Electron frontend project structure in `apps/springboard-desktop/`
+- [X] T002 Initialize Electron frontend project structure in `apps/springboard-desktop/`
   - Owner-run bootstrap in Sprint 1: `npx create-vite@latest apps/springboard-desktop -- --template vue-ts`
   - Stack target: Electron + Vue 3 + Pinia + Vue Router + PrimeVue + Tailwind
   - Main process: `electron/main.ts` (spawns Node backend, opens BrowserWindow)
@@ -96,14 +96,14 @@ Phase 8: Polish & Cross-Cutting (all stories)
   - Preload script: `electron/preload.ts` (IPC bridge)
   - Note: Do not pre-install or scaffold dependencies during Sprint 0
 
-- [ ] T003 Initialize Python services `services/springboard-python/`
+- [X] T003 Initialize Python services `services/springboard-python/`
   - Python 3.11 virtual environment scaffolding
   - `requirements.txt` with Flask, pywin32, requests, pydantic
   - `main.py` with Flask app structure (stub endpoints)
   - `venv/` folder (in .gitignore)
   - Documentation: setup.md (venv creation, pip install)
 
-- [ ] T004 [P] Create shared contracts package `packages/springboard-contracts/`
+- [X] T004 [P] Create shared contracts package `packages/springboard-contracts/`
   - TypeScript interfaces for all 4 API contracts
   - `src/permission-schema.ts` (PermissionScope enum, GrantRequest/GrantResponse types)
   - `src/lm-studio.ts` (ChatRequest, ChatResponse types, OpenAI-compatible)
@@ -111,24 +111,24 @@ Phase 8: Polish & Cross-Cutting (all stories)
   - `src/audit-log.ts` (AuditLogEntry types, event enum)
   - `package.json` with `tsup` for bundling + npm distribution
 
-- [ ] T005 [P] Set up monorepo root tooling
+- [X] T005 [P] Set up monorepo root tooling
   - Root `package.json` with npm workspaces (apps, services, packages)
   - `turbo.json` for build orchestration and caching
   - CI/CD script placeholders: `.github/workflows/build.yml`, `.github/workflows/test.yml`
   - Documentation: `DEVELOPMENT.md` (how to run all services locally)
 
-- [ ] T006 [P] Configure database infrastructure
+- [X] T006 [P] Configure database infrastructure
   - SQLCipher schema migration tool (e.g., `SQLCipher/better-sqlite3-multiple-ciphers-multiple-ciphers` or `typeorm`)
   - Create `apps/springboard-backend/src/db/migrations/` folder
   - Initial schema (stubs for all 8 entities: Conversation, Message, PermissionGrant, Skill, ScheduledTask, ToolExecutionRecord, AuditLogEntry, ConfigurationProfile)
   - Database initialization script: `scripts/init-db.sh`
 
-- [ ] T007 [P] Create GitHub issues template and project board
+- [X] T007 [P] Create GitHub issues template and project board
   - Issue templates: `.github/ISSUE_TEMPLATE/feature.md`, `bug.md`, `security.md`
   - Pull request template: `.github/pull_request_template.md`
   - GitHub Projects board linked to feature kanban (Setup, Foundational, US1-US5, Polish)
 
-- [ ] T008 [P] Scaffold README and architecture documentation
+- [X] T008 [P] Scaffold README and architecture documentation
   - Update root `README.md` with project purpose, tech stack, target users
   - Create `docs/ARCHITECTURE.md` (system diagram, component overview, deployment target)
   - Create `docs/SECURITY.md` (threat model, mitigations, audit logging approach)

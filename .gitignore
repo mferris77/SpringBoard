@@ -49,9 +49,27 @@ dist/
 .pytest_cache/
 coverage.xml
 htmlcov/
+.coverage
+*.cover
+
+## TypeScript
+*.tsbuildinfo
+
+## Turbo
+.turbo/
+
+## SpringBoard specific
+AppData/
+SpringBoard/
+*.key
+audit/*.jsonl
+conversations.db
+htmlcov/
 
 ## Misc
 thumbs.db
 ehthumbs.db
 Thumbs.db
 Desktop.ini
+
+AmosOps-Remote/*

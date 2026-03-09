@@ -1,0 +1,5 @@
+Flask==3.0.2
+requests==2.31.0
+pydantic==2.6.3
+pywin32==306
+python-dotenv==1.0.1

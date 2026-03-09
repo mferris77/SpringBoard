@@ -198,9 +198,160 @@ SpringBoard/
 │       ├── package.json
 │       └── index.html                # HTML entry point
 │
+**Current Sprint**: Sprint 1 Complete ✅  
+**Status**: Project foundation and infrastructure established
+
+## Sprint 1 Deliverables
+
+✅ Monorepo structure with npm workspaces  
+✅ Backend service (Node.js/TypeScript) with SQLCipher  
+✅ Python services structure (Flask-based)  
+✅ Shared contracts package (TypeScript types)  
+✅ Database infrastructure with migrations  
+✅ GitHub templates (issues, PRs)  
+✅ Documentation scaffold (ARCHITECTURE, CONTRIBUTING)  
+✅ Ignore files (.gitignore, .npmignore, .dockerignore)  
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- **Node.js**: 20.x or higher
+- **Python**: 3.11 or higher
+- **npm**: 10.x or higher
+- **Windows 10/11**: Target platform
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/[org]/SpringBoard.git
+cd SpringBoard
+
+# Install Node dependencies (monorepo)
+npm install
+
+# Setup Python virtual environment
+cd services/springboard-python
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+cd ../..
+
+# Initialize database
+node scripts/init-db.js
+```
+
+### Running Development Servers
+
+```bash
+# Terminal 1: Frontend (Electron + Vue 3 + Vite)
+npm run dev
+
+# Terminal 2: Backend (Node.js in Electron Main)
+npm run dev:backend
+
+# Terminal 3: Python services (Flask)
+npm run dev:python
+```
+
+### Building
+
+```bash
+# Build all workspaces
+npm run build
+
+# Build specific workspace
+npm run build:desktop
+npm run build:backend
+npm run build:contracts
+```
+
+### Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test --workspace=apps/springboard-backend -- --coverage
+
+# Python tests
+cd services/springboard-python
+pytest tests/
+```
+
+## Project Structure
+
+```
+SpringBoard/
+├── apps/
+│   ├── springboard-desktop/    # Electron + Vue 3 frontend
+│   └── springboard-backend/    # Node.js backend (Electron Main)
+├── packages/
+│   └── springboard-contracts/  # Shared TypeScript contracts
 ├── services/
-│   └── springboard-python/           # Python services (Azure OpenAI / AI Inference Engine bridge, Graph API, tools)
+│   └── springboard-python/     # Python services (Flask)
+├── specs/
+│   └── 001-local-ai-assistant/ # Feature specifications
+├── docs/                       # Documentation
+├── scripts/                    # Build and setup scripts
+└── .github/                    # GitHub templates
+```
+
+## Next Steps (Sprint 2)
+
+Sprint 2 focuses on **Security Foundation**:
+- Permission management (grant/revoke/check)
+- Encryption services (AES-256-GCM)
+- Audit logging (JSON Lines format)
+- Token refresh scheduler
+- Configuration management (SOUL.md, AGENTS.md, USER.md)
+
+See [sprint-plan.md](specs/001-local-ai-assistant/sprint-plan.md) for details.
+
+## Troubleshooting
+
+### Database initialization fails
+```bash
+# Check if AppData directory exists
+dir %APPDATA%\SpringBoard
+
+# Manually create if missing
+mkdir %APPDATA%\SpringBoard
+
+# Re-run init script
+node scripts/init-db.js
+```
+
+### Python services won't start
+```bash
+# Verify Python version
+python --version  # Should be 3.11+
+
+# Recreate virtual environment
+cd services/springboard-python
+rm -rf venv
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### npm install fails
+```bash
+# Clear npm cache
+npm cache clean --force
+
+# Delete node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+├── services/
+## Contributing
 │       ├── venv/                     # Virtual environment (in .gitignore)
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines.
 │       ├── main.py                   # Flask app entry point
 │       ├── requirements.txt
 │       └── modules/

@@ -1,0 +1,43 @@
+{
+  "name": "@springboard/contracts",
+  "version": "0.1.0",
+  "description": "Shared TypeScript contracts and schemas for SpringBoard",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./permission-schema": {
+      "types": "./dist/permission-schema.d.ts",
+      "import": "./dist/permission-schema.js"
+    },
+    "./audit-schema": {
+      "types": "./dist/audit-schema.d.ts",
+      "import": "./dist/audit-schema.js"
+    },
+    "./lm-studio": {
+      "types": "./dist/lm-studio.d.ts",
+      "import": "./dist/lm-studio.js"
+    },
+    "./sandbox-api": {
+      "types": "./dist/sandbox-api.d.ts",
+      "import": "./dist/sandbox-api.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
